@@ -18,8 +18,16 @@ const Header = () => {
       </div>
       <nav className="nav">
         <ul className="nav-list">
-          <li className="nav-item">My Playbook</li>
-          <li className="nav-item">About</li>
+          <li className="nav-item">
+            <Link to="/playbook" className="nav-item">
+              My Playbook
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about" className="nav-item">
+              About
+            </Link>
+          </li>
           <li className="nav-item">
             <Link to="/tier-list" className="nav-item">
               Tier List
