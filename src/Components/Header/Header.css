@@ -1,58 +1,74 @@
+@font-face {
+  font-family: "DeadlockFont";
+  src: url("../../assets/fonts/deadlockfont.ttf") format("truetype");
+}
+
 .header {
-	display: flex;
-	align-items: center;
-	padding: 10px 20px;
-	background-color: #333;
-	color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px; /* Increase padding for a bigger header */
+  background-color: #333;
+  color: #fff;
+  font-size: 18px; /* Increase font size for the header */
+  font-family: "DeadlockFont", sans-serif; /* Apply custom font */
 }
 
 .logo img {
-	height: 40px;
-	margin-right: 20px;
+  height: 80px; /* Increase the height of the logo */
 }
 
 .nav {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 .nav-list {
-	list-style: none;
-	display: flex;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .nav-item {
-	margin-right: 20px;
-	cursor: pointer;
-	position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 28px; /* Increase font size for nav items */
+  font-family: "DeadlockFont", sans-serif; /* Apply custom font */
+  padding: 5px; /* Add padding to maintain size */
+  position: relative; /* Ensure dropdown is positioned relative to nav-item */
 }
 
 .nav-item:hover {
-	color: #ddd;
+  color: #ddd;
+  background-color: #444; /* Highlight background on hover */
+  border-radius: 5px; /* Optional: Add border radius for rounded corners */
 }
 
 .dropdown-menu {
-	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background-color: #444;
-	list-style: none;
-	padding: 10px 0;
-	margin: 0;
-	min-width: 150px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 150px;
 }
 
 .dropdown-item {
-	padding: 10px 20px;
-	cursor: pointer;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 28px; /* Increase font size for dropdown items */
+  font-family: "DeadlockFont", sans-serif; /* Apply custom font */
 }
 
 .dropdown-item:hover {
-	background-color: #555;
+  background-color: #555;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
-	display: block;
+  display: block;
 }
