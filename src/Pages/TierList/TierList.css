@@ -1,0 +1,15 @@
+.tier-list {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.tier-list h1 {
+  font-family: "DeadlockFont", sans-serif; /* Use the custom font */
+  color: #333;
+}
+
+.tier-list p {
+  font-size: 16px;
+  color: #666;
+}
