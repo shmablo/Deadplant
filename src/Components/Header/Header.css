@@ -34,10 +34,12 @@
 .nav-item {
   margin-right: 20px;
   cursor: pointer;
-  font-size: 28px; /* Increase font size for nav items */
+  font-size: 26px; /* Increase font size for nav items */
   font-family: "DeadlockFont", sans-serif; /* Apply custom font */
-  padding: 5px; /* Add padding to maintain size */
-  position: relative; /* Ensure dropdown is positioned relative to nav-item */
+  padding: 4px; /* Add padding to maintain size */
+  color: #fff; /* Ensure text color is white */
+  text-decoration: none; /* Remove underline from links */
+  position: relative;
 }
 
 .nav-item:hover {
@@ -61,7 +63,7 @@
 .dropdown-item {
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 28px; /* Increase font size for dropdown items */
+  font-size: 26px; /* Increase font size for dropdown items */
   font-family: "DeadlockFont", sans-serif; /* Apply custom font */
 }
 

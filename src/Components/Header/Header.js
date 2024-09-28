@@ -21,7 +21,7 @@ const Header = () => {
           <li className="nav-item">My Playbook</li>
           <li className="nav-item">About</li>
           <li className="nav-item">
-            <Link to="/tier-list" className="nav-link">
+            <Link to="/tier-list" className="nav-item">
               Tier List
             </Link>
           </li>
