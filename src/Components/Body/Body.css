@@ -1,0 +1,65 @@
+html, body{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-container {
+    padding: 20px;
+    background-color: #d3d3d3; /* Light gray background */
+    background-image: url('background.jpg'); /* Add your background image here */
+    
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .haze-container img,
+  .paradox-container img {
+    margin: auto;
+ /* Adjust this value as needed */
+    
+  }
+  .paradox-container{
+    margin-left: 275px;
+    margin-bottom: 100px;
+  }
+  
+  .body-container h1 {
+    color: #c52424;
+  }
+  
+  .body-container p {
+    color: #c22e2e;
+  }
+  .bottomText{
+    color: #c52424;
+  }
+
+.agent-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agent-container {
+  margin: 20px;
+  text-align: center;
+  animation: fadeInOut 5s infinite; /* Apply the fade-in and fade-out animation */
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.body-container h1 {
+  color: #333;
+}
