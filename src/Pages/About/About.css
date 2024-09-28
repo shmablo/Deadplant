@@ -3,7 +3,15 @@
   src: url("../../assets/fonts/deadlockfont.ttf") format("truetype");
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+ overflow: hidden; /* Prevent scrolling */;
+}
+
 .about-container {
+  background-color: slategrey;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +19,10 @@
   font-family: "DeadlockFont", sans-serif; /* Apply custom font */
   color: #333; /* Text color */
   padding: 20px;
+  height: 100vh; /* Ensure it covers the full viewport height */
+  box-sizing: border-box;
+  flex-grow: 1;
+  overflow: hidden; /* Prevent internal scrolling */
 }
 
 .about-container h1 {
@@ -22,13 +34,14 @@
   font-size: 24px; /* Increase font size for the paragraph */
   margin-top: 0; /* Remove default margin-top */
 }
-
 .text-boxes {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 84%;
   margin-top: 20px;
-}
+  flex-wrap: wrap; /* Allow wrapping to fit within the viewport */
+} /* Additional styles for .text-boxes */
+
 
 .text-box {
   flex: 1;
@@ -40,6 +53,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 18px;
   text-align: center;
+  width: 50px;
 }
 
 .text-box a {
@@ -50,4 +64,25 @@
 .text-box img.logo {
   width: 50px; /* Adjust the size of the logo */
   height: auto;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px; /* Set the same width as .text-box */
+  height: 300x; /* Set the same height as .text-box */
+  margin-top: 0px; /* Space between text box and image */
+  margin-bottom: -5px;
+}
+
+.profile-image {
+  max-width: 100%; /* Ensure the image fits within the container */
+  max-height: 100%; /* Ensure the image fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.8; /* Set the opacity to blend the image */
+  filter: blur(0.3px); /* Apply a slight blur to the image */
+  margin-left: 20px;
+  margin-right:20px;
+  border-radius:10px;
 }

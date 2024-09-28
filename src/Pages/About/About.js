@@ -18,7 +18,7 @@ const About = () => {
           </a>
         </div>
         <div className="text-box">
-          Alex Zorilla
+          Alexander Zorrilla
           <a href="https://www.linkedin.com/in/alexander-zorrilla/">
             <img src="/linkedInlogo.png" alt="Logo" className="logo" />
           </a>
@@ -35,6 +35,12 @@ const About = () => {
             <img src="/linkedInlogo.png" alt="Logo" className="logo" />
           </a>
         </div>
+      </div>
+      <div className="image-container">
+        <img src="furzaan.jpg" alt="Furzaan Khan" className="profile-image" />
+        <img src="alex.jpg" alt="Alexander Zorrilla" className="profile-image" />
+        <img src="shmablo.jpg" alt="Pablo Ramos" className="profile-image" />
+        <img src="samantha.jpg" alt="Samantha Sanchez" className="profile-image" />
       </div>
     </div>
   );
