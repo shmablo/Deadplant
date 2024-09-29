@@ -133,6 +133,7 @@ const Playbook = () => {
 
       {/* Character selection section */}
       <div className="character-container">
+        <h1>HEROES</h1>
         {Array.from({ length: 21 }).map((_, index) => (
           <img
             key={index}
