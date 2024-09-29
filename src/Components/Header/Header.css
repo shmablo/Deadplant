@@ -7,15 +7,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px; /* Increase padding for a bigger header */
+  padding: 10px 40px;
+  /* Increase padding for a bigger header */
   background-color: #333;
   color: #fff;
-  font-size: 18px; /* Increase font size for the header */
-  font-family: "DeadlockFont", sans-serif; /* Apply custom font */
+  font-size: 18px;
+  /* Increase font size for the header */
+  font-family: "DeadlockFont", sans-serif;
+  /* Apply custom font */
+  position: relative;
+  z-index: 10;
 }
 
 .logo img {
-  height: 80px; /* Increase the height of the logo */
+  height: 80px;
+  /* Increase the height of the logo */
 }
 
 .nav {
@@ -32,18 +38,38 @@
 }
 
 .nav-item {
+  color: #F8F0E3;
+  /* Original color */
   margin-right: 20px;
   cursor: pointer;
-  font-size: 28px; /* Increase font size for nav items */
-  font-family: "DeadlockFont", sans-serif; /* Apply custom font */
-  padding: 5px; /* Add padding to maintain size */
-  position: relative; /* Ensure dropdown is positioned relative to nav-item */
+  font-size: 28px;
+  font-family: "DeadlockFont", sans-serif;
+  padding: 5px;
+  position: relative;
+  text-decoration: none;
+  /* Ensure no underline */
 }
 
 .nav-item:hover {
   color: #ddd;
-  background-color: #444; /* Highlight background on hover */
-  border-radius: 5px; /* Optional: Add border radius for rounded corners */
+  /* Change color on hover */
+  background-color: #444;
+  /* Highlight background on hover */
+  border-radius: 5px;
+  /* Optional: Add border radius for rounded corners */
+}
+
+.nav-item:visited,
+.nav-item:focus,
+.nav-item:active {
+  color: #F8F0E3;
+  /* Explicitly reset to original color */
+  background-color: #333;
+  /* Keep background consistent */
+  outline: none;
+  /* Remove the focus outline */
+  text-decoration: none;
+  /* Ensure no underline */
 }
 
 .dropdown-menu {
@@ -56,13 +82,16 @@
   padding: 10px 0;
   margin: 0;
   min-width: 150px;
+  z-index: 15;
 }
 
 .dropdown-item {
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 28px; /* Increase font size for dropdown items */
-  font-family: "DeadlockFont", sans-serif; /* Apply custom font */
+  font-size: 28px;
+  font-family: "DeadlockFont", sans-serif;
+  padding: 5px;
+  position: relative;
 }
 
 .dropdown-item:hover {
