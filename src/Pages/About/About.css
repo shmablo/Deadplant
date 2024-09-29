@@ -1,14 +1,3 @@
-@font-face {
-  font-family: "DeadlockFont";
-  src: url("../../assets/fonts/deadlockfont.ttf") format("truetype");
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
- /*overflow: hidden; /* Prevent scrolling */;
-}
-
 .about-container {
   background-color: slategrey;
   margin: 0;
@@ -16,34 +5,31 @@ html, body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: "DeadlockFont", sans-serif; /* Apply custom font */
-  color: #333; /* Text color */
+  font-family: "DeadlockFont", sans-serif;
+  color: #333;
   padding: 20px;
-  height: 100vh; /* Ensure it covers the full viewport height */
+  height: 100vh;
   box-sizing: border-box;
   flex-grow: 1;
- /* overflow: hidden; /* Prevent internal scrolling */
 }
 
-.about-container h1 {
-  font-size: 48px; /* Increase font size for the heading */
-  margin-bottom: 20px;
-}
-
-.about-container p {
-  font-size: 24px; /* Increase font size for the paragraph */
-  margin-top: 0; /* Remove default margin-top */
-}
 .text-boxes {
   display: flex;
   justify-content: space-between;
   width: 84%;
   margin-top: 20px;
-  flex-wrap: wrap; /* Allow wrapping to fit within the viewport */
-} /* Additional styles for .text-boxes */
+  flex-wrap: wrap;
+}
 
-
+/* Each text box */
 .text-box {
+  display: flex;
+  flex-direction: column;
+  /* Stack elements vertically */
+  align-items: center;
+  /* Center elements horizontally */
+  justify-content: space-between;
+  /* Add spacing between elements */
   flex: 1;
   margin: 0 10px;
   padding: 20px;
@@ -53,36 +39,69 @@ html, body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 18px;
   text-align: center;
-  width: 50px;
+  width: 250px;
+  opacity: 0;
+  /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards;
 }
 
-.text-box a {
-  display: block;
-  margin-top: 10px;
+/* Staggering animation delay for each text box */
+.text-box:nth-child(1) {
+  animation-delay: 0.2s;
 }
 
-.text-box img.logo {
-  width: 50px; /* Adjust the size of the logo */
-  height: auto;
+.text-box:nth-child(2) {
+  animation-delay: 0.4s;
 }
 
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 450px; /* Set the same width as .text-box */
-  height: 300x; /* Set the same height as .text-box */
-  margin-top: 0px; /* Space between text box and image */
-  margin-bottom: -5px;
+.text-box:nth-child(3) {
+  animation-delay: 0.6s;
 }
 
+.text-box:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Name styles */
+.text-box h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  /* Space between name and image */
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Profile image */
 .profile-image {
-  max-width: 100%; /* Ensure the image fits within the container */
-  max-height: 100%; /* Ensure the image fits within the container */
-  height: auto; /* Maintain aspect ratio */
-  opacity: 0.8; /* Set the opacity to blend the image */
-  filter: blur(0.3px); /* Apply a slight blur to the image */
-  margin-left: 20px;
-  margin-right:20px;
-  border-radius:10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 150px;
+  margin-bottom: 10px;
+  /* Space between image and LinkedIn icon */
+}
+
+/* LinkedIn icon */
+.text-box img.logo {
+  width: 25px;
+  /* Adjust the size of the LinkedIn icon */
+  height: auto;
+  margin-top: 10px;
+  /* Space between image and LinkedIn icon */
+}
+
+/* Keyframes for fading in from the bottom */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Start below the initial position */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* End at the final position */
+  }
 }

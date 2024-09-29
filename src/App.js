@@ -8,23 +8,28 @@ import Home from "./Pages/Home";
 import About from "./Pages/About/About";
 import Playbook from "./Pages/Playbook/Playbook";
 import Logout from "./Pages/Logout/Logout";
-// Footer
+import Login from "./Pages/Login/Login";
+import SignUp from "./Pages/Signup/Signup";
+import ProtectedRoute from './Components/ProtectedRoute';
 
 
 function App() {
   return (
     <Router>
       <Header />
-      <main className="main-content"> {/* Add the main-content class here */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tier-list" element={<TierList />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/playbook" element={<Playbook />} />
-          <Route path="/logout" element={<Logout />} />
-        </Routes>
-      </main>
- 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/tier-list" element={<TierList />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/playbook" element={
+          <ProtectedRoute>
+            <Playbook />
+          </ProtectedRoute>
+        } />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
     </Router>
   );
 }

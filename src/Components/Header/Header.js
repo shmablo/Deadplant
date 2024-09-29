@@ -1,9 +1,30 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Auth } from "aws-amplify";
 import "./Header.css"; // Import the CSS file
 
 const Header = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
+
+  // Check if the user is authenticated on component mount
+  useEffect(() => {
+    Auth.currentAuthenticatedUser()
+      .then(() => setIsAuthenticated(true))
+      .catch(() => setIsAuthenticated(false));
+  }, []);
+
+  // Logout function
+  const handleLogout = async () => {
+    try {
+      await Auth.signOut();
+      setIsAuthenticated(false);
+      navigate("/login"); // Redirect to login page after logout
+    } catch (error) {
+      console.error("Error signing out: ", error);
+    }
+  };
 
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
@@ -33,14 +54,21 @@ const Header = () => {
               Tier List
             </Link>
           </li>
-          <li className="nav-item">
-            <Link
-              to="https://deadplant.auth.us-east-2.amazoncognito.com/login?client_id=41dkf3t774e4qr7k45lvmtdvnq&response_type=code&scope=email+openid&redirect_uri=https%3A%2F%2Fhttp%3A%2F%2Flocalhost%3A3000%2F"
-              className="nav-link"
-            >
-              Login
-            </Link>
-          </li>
+
+          {isAuthenticated ? (
+            <li className="nav-item">
+              <button onClick={handleLogout} className="nav-link" style={{ border: 'none', fontSize: '28px', fontFamily: 'DeadlockFont, sans-serif', background: 'none', padding: '5px', cursor: 'pointer' }}>
+                Logout
+              </button>
+            </li>
+          ) : (
+            <li className="nav-item">
+              <Link to="/login" className="nav-link">
+                Login
+              </Link>
+            </li>
+          )}
+
           <li className="nav-item dropdown">
             {selectedLanguage}
             <ul className="dropdown-menu">
