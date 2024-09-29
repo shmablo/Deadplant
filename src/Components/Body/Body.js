@@ -23,10 +23,6 @@ const Body = () => {
           </Link>
         </div>
       </div>
-      {/* <div className="image-container">
-      </div>
-      <div className="bottomText">
-      </div> */}
     </div>
 
   );
