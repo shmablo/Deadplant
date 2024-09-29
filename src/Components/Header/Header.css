@@ -38,7 +38,7 @@
 }
 
 .nav-item {
-  color: #F8F0E3;
+  color: #f8f0e3;
   /* Original color */
   margin-right: 20px;
   cursor: pointer;
@@ -46,30 +46,18 @@
   font-family: "DeadlockFont", sans-serif;
   padding: 5px;
   position: relative;
-  text-decoration: none;
-  /* Ensure no underline */
+  text-decoration: none; /* Ensure no underline */
 }
 
-.nav-item:hover {
-  color: #ddd;
-  /* Change color on hover */
-  background-color: #444;
-  /* Highlight background on hover */
-  border-radius: 5px;
-  /* Optional: Add border radius for rounded corners */
+.nav-item a {
+  text-decoration: none; /* Ensure no underline for anchor tags */
 }
 
-.nav-item:visited,
-.nav-item:focus,
-.nav-item:active {
-  color: #F8F0E3;
-  /* Explicitly reset to original color */
-  background-color: #333;
-  /* Keep background consistent */
-  outline: none;
-  /* Remove the focus outline */
-  text-decoration: none;
-  /* Ensure no underline */
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus,
+.nav-link:visited {
+  color: #f8f0e3; /* Ensure the color stays the same on hover, active, focus, and visited */
 }
 
 .dropdown-menu {
