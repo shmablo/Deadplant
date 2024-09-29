@@ -1,15 +1,153 @@
-.tier-list {
+/* Import the DeadlockFont */
+@font-face {
+  font-family: "DeadlockFont";
+  src: url("../../assets/fonts/deadlockfont.ttf") format("truetype");
+}
+
+/* Apply DeadlockFont globally */
+body {
+  font-family: "DeadlockFont", sans-serif;
+}
+
+/* Container for the entire tier list */
+.tier-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 20px;
-  background-color: #f9f9f9;
+  font-family: "DeadlockFont", sans-serif;
+  height: 100vh; /* Make the entire container take the full height of the viewport */
+  overflow: hidden; /* Prevent vertical scrolling */
+}
+
+.tier-container {
+  margin-bottom: 20px; /* Add space between tiers */
+  text-align: left; /* Align text for the labels */
+}
+
+/* Left section for the item list */
+.item-list {
+  display: inline-flex; /* Inline-flex ensures all items stay in a single row */
+  padding: 10px;
+  gap: 10px;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.item-list h2 {
+  font-size: 24px;
+  font-family: "DeadlockFont", sans-serif;
+}
+
+/* Styling for draggable items */
+.draggable-item {
+  display: inline-block;
+  width: auto;
+  padding: 5px;
+  margin-right: 10px; /* Space between items */
+  text-align: center;
+}
+
+.draggable-item img {
+  width: 50px; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block;
+  cursor: pointer; /* Optional: Add cursor for interactive feel */
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+/* Right section for tier columns */
+.tier-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add space between tiers */
+  width: 50%;
+  overflow-y: auto; /* Allow scrolling within the tier section */
+  height: 100%; /* Fill the available height */
+}
+
+/* Each tier row */
+.tier-row {
+  border: 2px solid black;
+  min-height: 150px;
+  padding: 10px;
+  background-color: white;
+  transition: background-color 0.3s;
+  font-family: "DeadlockFont", sans-serif;
+}
+
+.tier-row h3 {
+  margin: 0 0 10px 0;
+  font-family: "DeadlockFont", sans-serif;
+  text-align: center;
+}
+
+.tier-items {
+  display: flex;
+  gap: 10px;
+}
+
+.tier-row.over {
+  background-color: #f0f0f0;
+}
+
+/* Scrollable row for items at the bottom */
+.scrollable-items-row {
+  width: 50%;
+  padding: 10px;
+  overflow-x: auto;
+  height: 100%; /* Ensure the draggable section also takes full height */
+}
+
+.scrollable-items-row .item-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  padding: 10px;
+  border: 1px solid black;
+  max-width: 100%;
+}
+
+.scrollable-items-row::-webkit-scrollbar {
+  height: 8px; /* Scrollbar height for horizontal scrolling */
+}
+
+.scrollable-items-row::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar thumb color */
+}
+
+.scrollable-items-row::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scrollbar thumb hover color */
+}
+
+.tier-label {
+  font-family: "DeadlockFont", sans-serif; /* Apply the custom font */
+  font-size: 1.5em;
+  display: block; /* Display label above the row */
+  margin-bottom: 10px; /* Space between label and images */
+}
+
+.reset-button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 10px; /* Add space between the image row and the button */
+}
+
+.reset-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
   border-radius: 5px;
 }
 
-.tier-list h1 {
-  font-family: "DeadlockFont", sans-serif; /* Use the custom font */
-  color: #333;
-}
-
-.tier-list p {
-  font-size: 16px;
-  color: #666;
+.reset-button:hover {
+  background-color: #d32f2f;
 }
