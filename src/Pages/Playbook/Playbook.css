@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "DeadlockFont";
+  src: url("../../assets/fonts/deadlockfont.ttf") format("truetype");
+}
+html{
+  overflow: hidden;
+}
+.playbook-container {
+  display: flex;
+  height: 100vh;
+  background-color: #282626;
+}
+
+.legend-container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 10px;
+  background-color: #282626;
+  margin-bottom: 225px;
+  font-family: "DeadlockFont", sans-serif;
+}
+
+.legend-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Space between header and legend items */
+}
+
+.legend-icon-header,
+.legend-description-header {
+  color: black; /* Set the text color */
+  font-size: 20px; /* Set the font size */
+  font-family: "DeadlockFont", sans-serif; 
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px; /* Space between legend items */
+}
+
+.legend-image {
+  width: 50px; /* Set the width of the legend images */
+  height: 50px; /* Set the height of the legend images */
+  margin-right: 10px; /* Space between image and description */
+}
+
+.legend-description {
+  color: black; /* Set the text color */
+  font-size: 20px; /* Set the font size */
+  margin-left: 50px;
+
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 10px;
+  background-color: #2e2e2e;
+  margin-right: 20px; /* Space between map and character container */
+}
+.map-image {
+  width: 1000px; /* Ensure the image fits within the container */
+  height: 1000px; /* Ensure the image fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Maintain aspect ratio */
+  margin-top: -200px;
+  margin-right: 200px;
+  margin-left: 200px;
+
+}
+.character-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap: 5px; /* Space between the images */
+  padding: 10px;
+  width: 300px; /* Set a width for the character container */
+height: 615px;
+  background-color: #282626;
+}
+
+.character-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* Ensure images keep their aspect ratio */
+  border: 1px solid #444; /* Subtle dark border */
+  border-radius: 5px; /* Rounded corners for a smoother look */
+  padding: 3px; /* Optional padding inside the border */
+}
+
+

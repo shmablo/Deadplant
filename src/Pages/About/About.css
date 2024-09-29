@@ -6,7 +6,7 @@
 html, body {
   height: 100%;
   margin: 0;
- overflow: hidden; /* Prevent scrolling */;
+ /*overflow: hidden; /* Prevent scrolling */;
 }
 
 .about-container {
@@ -22,7 +22,7 @@ html, body {
   height: 100vh; /* Ensure it covers the full viewport height */
   box-sizing: border-box;
   flex-grow: 1;
-  overflow: hidden; /* Prevent internal scrolling */
+ /* overflow: hidden; /* Prevent internal scrolling */
 }
 
 .about-container h1 {
