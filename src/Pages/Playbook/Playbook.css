@@ -88,26 +88,31 @@ html{
   padding-left: 10px;
   background-color: #2e2e2e;
   margin-right: 20px;
+  clip-path: circle(50% at 50% 50%); /* Make the map a circular area */
+  overflow: hidden; /* Ensure no elements can visually overflow outside the circle */
+  position: relative; /* Ensure that dropped elements are positioned relative to the map */
 }
 .map-image {
-  width: 1000px; /* Ensure the image fits within the container */
-  height: 1000px; /* Ensure the image fits within the container */
-  height: auto; /* Maintain aspect ratio */
-  width: auto; /* Maintain aspect ratio */
+  width: 100%; /* Ensure the image fits within the container */
+  height: auto; /* Ensure the image fits within the container */
+  border-radius: 50%; /* Make it a perfect circle */
+  clip-path: circle(50%); /* Ensure overflow is hidden and circle shape is maintained */
   margin-top: -115px;
   margin-right: 100px;
   margin-left: 100px;
+  display:block;
 
 }
 .character-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
-  gap: 10px; /* Increase space between the images */
-  padding: 10px;
+  gap: 2px; /* Increase space between the images */
+  padding: 1px;
   width: 260px; /* Adjust the width for more spacing */
   background-color: #282626;
   justify-items: center; /* Center the items horizontally */
   margin-right: 40px;
+  margin-bottom: 300px;;
 }
 
 .character-container h1 {
@@ -118,6 +123,7 @@ html{
   text-align: center;
   grid-column: span 3; /* Make the title span all 3 columns */
   width: 100%; /* Ensure the title spans full width */
+  padding:0;
 }
 
 .character-image {
@@ -130,6 +136,13 @@ html{
   box-shadow: inset 0 0 5px 2px #1b611a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: grab; /* Visual indicator for dragging */
+  z-index: 1;;
+}
+
+.dropped {
+  position: absolute;
+  cursor: grab;
+  z-index: 10;
 }
 
 .character-image:hover {
@@ -140,6 +153,8 @@ html{
 .dropped-character {
   position: absolute;
   z-index: 10;
+  cursor: grab; /* Indicate that it's draggable */
+  display: block; /* Make sure only images are displayed */
 }
 /* Garbage bin for deleting characters */
 .garbage-bin {
@@ -179,6 +194,7 @@ html{
   padding-top:0.5px;
   padding-bottom:0;
   border-radius: 8px; /* Optional: Slight rounding of the background corners */
+  
   
 }
 

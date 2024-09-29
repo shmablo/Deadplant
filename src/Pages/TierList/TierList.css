@@ -81,8 +81,9 @@ body {
   width: 350px; /* Adjust the width to give enough space for 3 columns */
   display: flex;
   flex-direction: column;
+  gap: 1px;
   height: 100%;
-  padding: 15px;
+  padding: 1px;
   margin-left: 60px;
   margin-right:60px;
   background-color: #282626; /* Optional: Slight background */
@@ -94,7 +95,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   grid-template-rows: repeat(7, 1fr); /* 7 rows with equal height */
-  gap: 14px; /* Space between items */
+  gap: 8px; /* Space between items */
   margin-left:50px;
   padding: 0;
   width: 80%; /* Ensure the grid takes up full width */
@@ -105,8 +106,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%; /* Ensure the item takes the full width of the grid cell */
-  height: 100%; /* Ensure the item takes the full height of the grid cell */
+  width: 80px; /* Ensure the item takes the full width of the grid cell */
+  height: 70px; /* Ensure the item takes the full height of the grid cell */
   padding: 0.25px; /* Add padding around the images */
   box-sizing: border-box;
   border-radius: 8px; /* Rounded corners for cleaner look */
