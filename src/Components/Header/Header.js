@@ -35,7 +35,7 @@ const Header = () => {
           </li>
           <li className="nav-item">
             <Link
-              to="https://deadplant.auth.us-east-2.amazoncognito.com/login?client_id=41dkf3t774e4qr7k45lvmtdvnq&response_type=code&scope=email+openid&redirect_uri=https%3A%2F%2Fhttp%3A%2F%2Flocalhost%3A3000%2F"
+              to="/login"
               className="nav-link"
             >
               Login
