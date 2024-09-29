@@ -1,49 +1,147 @@
-html, body{
-  margin:0;
+@font-face {
+  font-family: "DeadlockFont";
+  src: url("../../assets/fonts/deadlockfont.ttf") format("truetype");
+}
+
+html,
+body {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .body-container {
-    padding: 20px;
-    background-color: #d3d3d3; /* Light gray background */
-    background-image: url('background.jpg'); /* Add your background image here */
-    
-    background-size: cover; /* Ensure the background image covers the entire container */
-    background-position: center; /* Center the background image */
-    font-family: Arial, sans-serif;
-    min-height: 100vh; /* Ensure it covers the full viewport height */
-  }
-  
-  .image-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .haze-container img,
-  .paradox-container img {
-    margin: auto;
- /* Adjust this value as needed */
-    
-  }
-  .paradox-container{
-    margin-left: 275px;
-    margin-bottom: 100px;
-  }
-  
-  .body-container h1 {
-    color: #c52424;
-  }
-  
-  .body-container p {
-    color: #c22e2e;
-  }
-  .bottomText{
-    color: #c52424;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #3e3939;
+  /* Light gray background */
+  background-size: cover;
+  /* Ensure the background image covers the entire container */
+  background-position: center;
+  /* Center the background image */
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  /* Ensure it covers the full viewport height */
+}
+
+/* The Background video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+  animation: fadeInAnimation 2s ease-in-out;
+  /* z-index: -1; Leave this alone!!*/
+}
+
+/* This is the box that the title and mini paragraph are in*/
+.text-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeInAnimation 2s ease-in-out;
+}
+
+/* The title inside the box*/
+.text-container h1 {
+  color: #F8F0E3;
+  display: flex;
+  justify-content: center;
+  font-family: "DeadlockFont", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
   }
 
-.agent-group {
+  to {
+    opacity: 1;
+  }
+}
+
+/*The paragraph*/
+.text-container p {
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: default
+}
+
+/* Highlight class for specific words */
+.highlight {
+  color: #1b611a;
+  /* Change this to the desired color */
+}
+
+/* The button inside the box*/
+.styled-button {
+  background-color: #1b611a;
+  font-family: "DeadlockFont", sans-serif;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.styled-button:hover {
+  background-color: #fff;
+  /* Changes background to white */
+  color: #1b611a;
+  /* Changes text color to green */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* .text-overlay h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 20px;
+} */
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .haze-container img,
+.paradox-container img {
+  margin: auto;
+  /* Adjust this value as needed */
+
+
+
+/* .paradox-container {
+  margin-left: 275px;
+  margin-bottom: 100px;
+} */
+
+/* .body-container h1 {
+  color: #c52424;
+} */
+
+/* .body-container p {
+  color: #c22e2e;
+} */
+
+
+/* .agent-group {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,14 +150,23 @@ html, body{
 .agent-container {
   margin: 20px;
   text-align: center;
-  animation: fadeInOut 5s infinite; /* Apply the fade-in and fade-out animation */
-}
+  animation: fadeInOut 5s infinite;
+  /* Apply the fade-in and fade-out animation */
+
 
 @keyframes fadeInOut {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
+/* 
 .body-container h1 {
   color: #333;
-}
+} */

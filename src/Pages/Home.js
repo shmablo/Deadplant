@@ -1,9 +1,10 @@
 import React from "react";
+import Body from "../Components/Body/Body";
 
 function Home() {
     return (
         <div>
-            <h1>Deadplant</h1>
+            <Body />
         </div>
     );
 };
