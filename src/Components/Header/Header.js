@@ -20,7 +20,7 @@ const Header = () => {
         <ul className="nav-list">
           <li className="nav-item">
             <Link to="/playbook" className="nav-link">
-              My Playbook
+              Playbook
             </Link>
           </li>
           <li className="nav-item">

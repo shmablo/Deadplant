@@ -29,14 +29,9 @@ html{
 
 .legend-icon-header,
 .legend-description-header {
-  color: black; /* Set the text color */
+  color: #f8f0e3; /* Set the text color */
   font-size: 20px; /* Set the font size */
   font-family: "DeadlockFont", sans-serif; 
-  text-shadow:
-  -1px -1px 0 #f8f0e3,  /* Top-left shadow */
-   1px -1px 0 #f8f0e3,  /* Top-right shadow */
-  -1px  1px 0 #f8f0e3,  /* Bottom-left shadow */
-   1px  1px 0 #f8f0e3;  /* Bottom-right shadow */
 }
 
 .legend-item {
@@ -53,12 +48,7 @@ html{
 }
 
 .legend-description {
-  color: black; /* Set the text color */
-  text-shadow:
-  -1px -1px 0 #f8f0e3,  /* Top-left shadow */
-   1px -1px 0 #f8f0e3,  /* Top-right shadow */
-  -1px  1px 0 #f8f0e3,  /* Bottom-left shadow */
-   1px  1px 0 #f8f0e3;  /* Bottom-right shadow */
+  color: #f8f0e3; /* Set the text color */
   font-size: 20px; /* Set the font size */
   margin-left: 50px;
 
