@@ -34,7 +34,7 @@ body {
   height: 60vh;
   object-fit: cover;
   animation: fadeInAnimation 2s ease-in-out;
-  /* z-index: -1; */
+  /* z-index: -1; Leave this alone!!*/
 }
 
 /* This is the box that the title and mini paragraph are in*/
