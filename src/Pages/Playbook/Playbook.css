@@ -38,6 +38,7 @@ html{
   display: flex;
   align-items: center;
   margin-bottom: 25px; /* Space between legend items */
+  position: relative;
 }
 
 .legend-image {
@@ -53,14 +54,40 @@ html{
 
 }
 
+.legend-item:hover::after {
+  content: attr(alt); /* Use the alt attribute as the text content */
+  position: absolute;
+  bottom: 100%; /* Position above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:  #1b611a; /* Background color for the text box */
+  color: rgb(244, 234, 234); /* Text color */
+  padding: 8px 12px;
+  border-radius: 3px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  z-index: 10; /* Ensure it appears above other elements */
+  opacity: 0.9; /* Slight transparency for better visibility */
+  visibility: visible;
+  transition: opacity 0.3s ease; /* Optional: add transition for smoothness */
+}
+.legend-item::after {
+  opacity: 0; /* Hide by default */
+  visibility: hidden; /* Hidden by default */
+}
+.legend-item:hover::after {
+  opacity: 1; /* Make sure it’s fully visible on hover */
+  visibility: visible; /* Show on hover */
+}
+
 .map-container {
+  position: relative; /* Ensure the map is the anchor for dropped elements */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
   padding-left: 10px;
   background-color: #2e2e2e;
-  margin-right: 20px; /* Space between map and character container */
+  margin-right: 20px;
 }
 .map-image {
   width: 1000px; /* Ensure the image fits within the container */
@@ -89,6 +116,53 @@ height: 615px;
   border: 1px solid #444; /* Subtle dark border */
   border-radius: 5px; /* Rounded corners for a smoother look */
   padding: 3px; /* Optional padding inside the border */
+  box-shadow: inset 0 0 5px 2px #1b611a;
 }
 
+/* Existing styles ... */
+
+.dropped-character {
+  position: absolute;
+  z-index: 10;
+}
+
+.garbage-bin {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(218, 139, 139);
+  text-align: center;
+  line-height: 80px;
+  font-size: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.garbage-bin:hover {
+  background-color: darkred;
+}
+
+/* Adjusting the character image size */
+.character-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  cursor: grab; /* Visual indicator for dragging */
+}
+
+.character-image.dropped-character {
+  box-shadow: none; /* Remove the box-shadow */
+  border: none; /* Optionally, you can remove the border as well */
+  width: 45px; /* Resize when dropped on the map */
+  height: 45px;
+  background-color: #1b611a; /* Add a small background color */
+  padding-right: 0; /* Optional: Add padding to give it some space around the image */
+  padding-left: 0;
+  padding-top:0.5px;
+  padding-bottom:0;
+  border-radius: 8px; /* Optional: Slight rounding of the background corners */
+  
+}
 
