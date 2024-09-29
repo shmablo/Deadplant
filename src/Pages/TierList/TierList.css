@@ -7,6 +7,8 @@
 /* Apply DeadlockFont globally */
 body {
   font-family: "DeadlockFont", sans-serif;
+  background-color: #282626;
+  margin: 0;
 }
 
 /* Container for the entire tier list */
@@ -38,6 +40,9 @@ body {
 .item-list h2 {
   font-size: 24px;
   font-family: "DeadlockFont", sans-serif;
+}
+.scrollable-items-row h2 {
+  color: white; /* Change the font color to white */
 }
 
 /* Styling for draggable items */
@@ -75,8 +80,6 @@ body {
   border: 2px solid black;
   min-height: 150px;
   padding: 10px;
-  background-color: white;
-  transition: background-color 0.3s;
   font-family: "DeadlockFont", sans-serif;
 }
 
@@ -84,6 +87,25 @@ body {
   margin: 0 0 10px 0;
   font-family: "DeadlockFont", sans-serif;
   text-align: center;
+}
+.tier-row.S {
+  background-color: #fa6563; /* Light red for S tier */
+  font-size: 35px; /* Increase font size for S tier */
+}
+
+.tier-row.A {
+  background-color: #fea05d; /* Light blue for A tier */
+  font-size: 35px; /* Increase font size for A tier */
+}
+
+.tier-row.B {
+  background-color: #d6eb38; /* Light green for B tier */
+  font-size: 35px; /* Increase font size for B tier */
+}
+
+.tier-row.C {
+  background-color: #31ee14; /* Light yellow for C tier */
+  font-size: 35px; /* Increase font size for C tier */
 }
 
 .tier-items {

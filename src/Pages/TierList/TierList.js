@@ -36,7 +36,7 @@ const TierRow = ({ label, items, onDropItem }) => {
   }));
 
   return (
-    <div ref={drop} className={`tier-row ${isOver ? "over" : ""}`}>
+    <div ref={drop} className={`tier-row ${label} ${isOver ? "over" : ""}`}>
       <h3>{label}</h3> {/* Place the label above the tier items */}
       <div className="tier-items">
         {items.map((item) => (
