@@ -125,24 +125,24 @@ height: 615px;
   position: absolute;
   z-index: 10;
 }
-
+/* Garbage bin for deleting characters */
 .garbage-bin {
   position: absolute;
   bottom: 20px;
-  right: 20px;
+  left: 20px; /* Position it in the bottom left */
   width: 80px;
   height: 80px;
-  background-color: rgb(218, 139, 139);
-  text-align: center;
-  line-height: 80px;
-  font-size: 40px;
-  cursor: pointer;
-  border-radius: 50%;
+  border: solid black; /* Remove the dashed border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D2B48C; /* Tan background */
+  border-radius: 50%; /* Rounded shape for the bin */
+  cursor: pointer; /* Indicate that it's interactive */
+  font-size: 45px;
 }
 
-.garbage-bin:hover {
-  background-color: darkred;
-}
+
 
 /* Adjusting the character image size */
 .character-image {

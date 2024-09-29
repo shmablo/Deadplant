@@ -145,26 +145,14 @@ const Playbook = () => {
         ))}
       </div>
 
-      {/* Garbage bin for deleting characters */}
-      <div
-        className="garbage-bin"
-        onDrop={handleDeleteDrop}
-        onDragOver={allowDrop}
-        style={{
-          position: "absolute",
-          bottom: "20px",
-          left: "20px", // Moved to bottom left
-          width: "50px",
-          height: "50px",
-          border: "2px dashed red",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#fff"
-        }}
-      >
-        🗑️
-      </div>
+{/* Garbage bin for deleting characters */}
+<div
+  className="garbage-bin"
+  onDrop={handleDeleteDrop}
+  onDragOver={allowDrop}
+>
+  🗑️
+</div>
     </div>
   );
 };
