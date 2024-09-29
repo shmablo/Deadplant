@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Amplify } from 'aws-amplify'; // Ensure correct named import of Amplify
-import awsConfig from './aws-exports'; // Import your AWS configuration
-
 import Header from "./Components/Header/Header";
+
+// Pages for the Router
 import TierList from "./Pages/TierList/TierList";
 import Home from "./Pages/Home";
 import About from "./Pages/About/About";
@@ -13,8 +12,6 @@ import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/Signup/Signup";
 import ProtectedRoute from './Components/ProtectedRoute';
 
-// Configure Amplify
-Amplify.configure(awsConfig);
 
 function App() {
   return (

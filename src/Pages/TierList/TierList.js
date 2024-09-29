@@ -37,7 +37,7 @@ const TierRow = ({ label, items, onDropItem }) => {
 
   return (
     <div ref={drop} className={`tier-row ${label} ${isOver ? "over" : ""}`}>
-      <h3>{label}</h3> {/* Place the label above the tier items */}
+      <h3>{label}</h3>
       <div className="tier-items">
         {items.map((item) => (
           <DraggableItem key={item.id} item={item} />
@@ -90,13 +90,10 @@ const TierList = () => {
       [tierLabel]: [...prevTiers[tierLabel], draggedItem],
     }));
 
-    // Optionally, remove the item from the main list after dragging
     setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
   };
 
-  // Function to reset the tier list
   const handleReset = () => {
-    // Reset the tiers to empty
     setTiers({
       S: [],
       A: [],
@@ -104,14 +101,13 @@ const TierList = () => {
       C: [],
     });
 
-    // Restore all items to the main draggable list
     setItems(initialItems);
   };
 
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="tier-list-container">
-        {/* Right side for tier levels */}
+        {/* Left side for tier levels */}
         <div className="tier-columns">
           {["S", "A", "B", "C"].map((tier) => (
             <TierRow
@@ -123,16 +119,15 @@ const TierList = () => {
           ))}
         </div>
 
-        {/* Left side for draggable items in a scrollable row */}
-        <div className="scrollable-items-row">
+        {/* Right side for draggable items in a 3x7 grid */}
+        <div className="grid-items-column">
           <h2>Heroes</h2>
-          <div className="item-list">
+          <div className="grid-item-list">
             {items.map((item) => (
               <DraggableItem key={item.id} item={item} />
             ))}
           </div>
 
-          {/* Add the reset button under the images */}
           <div className="reset-button-container">
             <button onClick={handleReset} className="reset-button">
               Reset

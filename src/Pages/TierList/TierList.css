@@ -1,13 +1,7 @@
-/* Import the DeadlockFont */
-@font-face {
-  font-family: "DeadlockFont";
-  src: url("../../assets/fonts/deadlockfont.ttf") format("truetype");
-}
-
-/* Apply DeadlockFont globally */
+/* Global styling */
 body {
   font-family: "DeadlockFont", sans-serif;
-  background-color: #282626;
+  background-color: #2e2e2e;
   margin: 0;
 }
 
@@ -17,95 +11,45 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
-  font-family: "DeadlockFont", sans-serif;
-  height: 100vh; /* Make the entire container take the full height of the viewport */
+  height: 100vh; /* Full height of the viewport */
   overflow: hidden; /* Prevent vertical scrolling */
 }
 
-.tier-container {
-  margin-bottom: 20px; /* Add space between tiers */
-  text-align: left; /* Align text for the labels */
-}
-
-/* Left section for the item list */
-.item-list {
-  display: inline-flex; /* Inline-flex ensures all items stay in a single row */
-  padding: 10px;
-  gap: 10px;
-  overflow-x: auto;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.item-list h2 {
-  font-size: 24px;
-  font-family: "DeadlockFont", sans-serif;
-}
-.scrollable-items-row h2 {
-  color: white; /* Change the font color to white */
-}
-
-/* Styling for draggable items */
-.draggable-item {
-  display: inline-block;
-  width: auto;
-  padding: 5px;
-  margin-right: 10px; /* Space between items */
-  text-align: center;
-}
-
-.draggable-item img {
-  width: 50px; /* Set image width */
-  height: auto; /* Maintain aspect ratio */
-  display: inline-block;
-  cursor: pointer; /* Optional: Add cursor for interactive feel */
-}
-
-.dragging {
-  opacity: 0.5;
-}
-
-/* Right section for tier columns */
+/* Left section for tier columns */
 .tier-columns {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Add space between tiers */
-  width: 50%;
-  overflow-y: auto; /* Allow scrolling within the tier section */
-  height: 100%; /* Fill the available height */
+  gap: 10px; /* Space between tiers */
+  width: 60%; /* Occupy more space for tiers */
+  overflow-y: auto;
+  height: 100%;
 }
 
-/* Each tier row */
+/* Tier row styling */
 .tier-row {
   border: 2px solid black;
   min-height: 150px;
   padding: 10px;
-  font-family: "DeadlockFont", sans-serif;
 }
 
-.tier-row h3 {
-  margin: 0 0 10px 0;
-  font-family: "DeadlockFont", sans-serif;
-  text-align: center;
-}
 .tier-row.S {
-  background-color: #fa6563; /* Light red for S tier */
-  font-size: 35px; /* Increase font size for S tier */
+  background-color: #fa6563; /* Red for S tier */
+  font-size: 35px;
 }
 
 .tier-row.A {
-  background-color: #fea05d; /* Light blue for A tier */
-  font-size: 35px; /* Increase font size for A tier */
+  background-color: #fea05d; /* Orange for A tier */
+  font-size: 35px;
 }
 
 .tier-row.B {
-  background-color: #d6eb38; /* Light green for B tier */
-  font-size: 35px; /* Increase font size for B tier */
+  background-color: #d6eb38; /* Yellow-green for B tier */
+  font-size: 35px;
 }
 
 .tier-row.C {
-  background-color: #31ee14; /* Light yellow for C tier */
-  font-size: 35px; /* Increase font size for C tier */
+  background-color: #31ee14; /* Green for C tier */
+  font-size: 35px;
 }
 
 .tier-items {
@@ -113,56 +57,110 @@ body {
   gap: 10px;
 }
 
+.tier-row h3 {
+  margin: 0;
+  text-align: center;
+}
+
 .tier-row.over {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Hover effect */
 }
 
-/* Scrollable row for items at the bottom */
-.scrollable-items-row {
-  width: 50%;
-  padding: 10px;
-  overflow-x: auto;
-  height: 100%; /* Ensure the draggable section also takes full height */
-}
-
-.scrollable-items-row .item-list {
+/* Right side for draggable items in a 3x7 grid layout */
+.grid-items-column {
+  width: 50%; /* Adjust the width to give enough space for 3 columns */
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 20px;
+  
+}
+
+/* Right side for draggable items in a 3x7 grid layout */
+.grid-items-column {
+  width: 350px; /* Adjust the width to give enough space for 3 columns */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 15px;
+  margin-left: 60px;
+  margin-right:60px;
+  background-color: #282626; /* Optional: Slight background */
+  border-radius: 10px; /* Rounded corners for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the box */
+}
+
+.grid-item-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(7, 1fr); /* 7 rows with equal height */
+  gap: 14px; /* Space between items */
+  margin-left:50px;
+  padding: 0;
+  width: 80%; /* Ensure the grid takes up full width */
+  box-sizing: border-box; /* Make sure padding is included */
+}
+
+.draggable-item {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  overflow-x: auto;
-  padding: 10px;
-  border: 1px solid black;
-  max-width: 100%;
+  width: 80%; /* Ensure the item takes the full width of the grid cell */
+  height: 100%; /* Ensure the item takes the full height of the grid cell */
+  padding: 0.25px; /* Add padding around the images */
+  box-sizing: border-box;
+  border-radius: 8px; /* Rounded corners for cleaner look */
+  background-color: #2e2e2e;/* Light background behind the image */
+  box-shadow: inset 0 0 5px 2px #1b611a;; /* Subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation on hover */
+  padding: 0;
 }
 
-.scrollable-items-row::-webkit-scrollbar {
-  height: 8px; /* Scrollbar height for horizontal scrolling */
+.draggable-item img {
+  width: 85px; /* Adjust this based on the size of your images */
+  height: 85px; /* Maintain aspect ratio */
+  cursor: pointer;
+  max-width: 90%; /* Ensure images don’t overflow the grid cells */
+  max-height: 65px; /* Constrain the height to keep a uniform grid */
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.2s ease; /* Smooth scaling on hover */
 }
 
-.scrollable-items-row::-webkit-scrollbar-thumb {
-  background: #888; /* Scrollbar thumb color */
+
+.dragging {
+  opacity: 0.5;
 }
 
-.scrollable-items-row::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Scrollbar thumb hover color */
+.draggable-item:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+  box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.6); /* Add a glowing shadow effect */
 }
 
-.tier-label {
-  font-family: "DeadlockFont", sans-serif; /* Apply the custom font */
-  font-size: 1.5em;
-  display: block; /* Display label above the row */
-  margin-bottom: 10px; /* Space between label and images */
+.draggable-item img:hover {
+  transform: scale(1.05); /* Slightly scale the image on hover */
 }
 
+.grid-items-column h2 {
+  text-align: center; /* Center the text horizontally */
+  margin-bottom: 15px; /* Add some space between the heading and the grid */
+  margin-right: 30px;
+  margin-left: 45px;
+  font-size: 24px; /* Adjust font size if necessary */
+  color: #f8f0e3; /* Ensure visibility against the background */
+}
+
+/* Reset button styling */
 .reset-button-container {
   display: flex;
-  justify-content: center; /* Center the button horizontally */
-  margin-top: 10px; /* Add space between the image row and the button */
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .reset-button {
   padding: 10px 20px;
   font-size: 16px;
+  margin-right: 25px;
+  margin-left: 40px;
   background-color: #f44336;
   color: white;
   border: none;
