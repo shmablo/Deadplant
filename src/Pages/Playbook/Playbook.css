@@ -32,6 +32,11 @@ html{
   color: black; /* Set the text color */
   font-size: 20px; /* Set the font size */
   font-family: "DeadlockFont", sans-serif; 
+  text-shadow:
+  -1px -1px 0 #f8f0e3,  /* Top-left shadow */
+   1px -1px 0 #f8f0e3,  /* Top-right shadow */
+  -1px  1px 0 #f8f0e3,  /* Bottom-left shadow */
+   1px  1px 0 #f8f0e3;  /* Bottom-right shadow */
 }
 
 .legend-item {
@@ -49,6 +54,11 @@ html{
 
 .legend-description {
   color: black; /* Set the text color */
+  text-shadow:
+  -1px -1px 0 #f8f0e3,  /* Top-left shadow */
+   1px -1px 0 #f8f0e3,  /* Top-right shadow */
+  -1px  1px 0 #f8f0e3,  /* Bottom-left shadow */
+   1px  1px 0 #f8f0e3;  /* Bottom-right shadow */
   font-size: 20px; /* Set the font size */
   margin-left: 50px;
 
@@ -94,9 +104,9 @@ html{
   height: 1000px; /* Ensure the image fits within the container */
   height: auto; /* Maintain aspect ratio */
   width: auto; /* Maintain aspect ratio */
-  margin-top: -200px;
-  margin-right: 200px;
-  margin-left: 200px;
+  margin-top: -115px;
+  margin-right: 100px;
+  margin-left: 100px;
 
 }
 .character-container {
@@ -129,14 +139,14 @@ height: 615px;
 .garbage-bin {
   position: absolute;
   bottom: 20px;
-  left: 20px; /* Position it in the bottom left */
+  left: 75px; /* Position it in the bottom left */
   width: 80px;
   height: 80px;
   border: solid black; /* Remove the dashed border */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #D2B48C; /* Tan background */
+  background-color: #f8f0e3; /* Tan background */
   border-radius: 50%; /* Rounded shape for the bin */
   cursor: pointer; /* Indicate that it's interactive */
   font-size: 45px;
