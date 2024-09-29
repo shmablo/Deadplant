@@ -12,35 +12,33 @@ const About = () => {
       </p>
       <div className="text-boxes">
         <div className="text-box">
-          Furzaan Khan
+          <h3>Furzaan Khan</h3>  {/* Name placed above the image */}
+          <img src="furzaan.jpg" alt="Furzaan Khan" className="profile-image" />
           <a href="https://www.linkedin.com/in/furzaankhan/">
-            <img src="/linkedInlogo.png" alt="Logo" className="logo" />
+            <img src="/linkedInlogo.png" alt="LinkedIn Logo" className="logo" />
           </a>
         </div>
         <div className="text-box">
-          Alexander Zorrilla
+          <h3>Alexander Zorrilla</h3>  {/* Name placed above the image */}
+          <img src="alex.jpg" alt="Alexander Zorrilla" className="profile-image" />
           <a href="https://www.linkedin.com/in/alexander-zorrilla/">
-            <img src="/linkedInlogo.png" alt="Logo" className="logo" />
+            <img src="/linkedInlogo.png" alt="LinkedIn Logo" className="logo" />
           </a>
         </div>
         <div className="text-box">
-          Pablo Ramos
+          <h3>Pablo Ramos</h3>  {/* Name placed above the image */}
+          <img src="shmablo.jpg" alt="Pablo Ramos" className="profile-image" />
           <a href="https://www.linkedin.com/in/pabloramos06/">
-            <img src="/linkedInlogo.png" alt="Logo" className="logo" />
+            <img src="/linkedInlogo.png" alt="LinkedIn Logo" className="logo" />
           </a>
         </div>
         <div className="text-box">
-          Samantha Sanchez
+          <h3>Samantha Sanchez</h3>  {/* Name placed above the image */}
+          <img src="samantha.jpg" alt="Samantha Sanchez" className="profile-image" />
           <a href="https://example.com">
-            <img src="/linkedInlogo.png" alt="Logo" className="logo" />
+            <img src="/linkedInlogo.png" alt="LinkedIn Logo" className="logo" />
           </a>
         </div>
-      </div>
-      <div className="image-container">
-        <img src="furzaan.jpg" alt="Furzaan Khan" className="profile-image" />
-        <img src="alex.jpg" alt="Alexander Zorrilla" className="profile-image" />
-        <img src="shmablo.jpg" alt="Pablo Ramos" className="profile-image" />
-        <img src="samantha.jpg" alt="Samantha Sanchez" className="profile-image" />
       </div>
     </div>
   );

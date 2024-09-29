@@ -1,4 +1,4 @@
-import { Amplify } from 'aws-amplify';
+
 const awsConfig = {
     Auth: {
         // REQUIRED - Amazon Cognito Identity Pool ID

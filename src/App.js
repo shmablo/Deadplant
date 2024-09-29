@@ -9,8 +9,9 @@ import Home from "./Pages/Home";
 import About from "./Pages/About/About";
 import Playbook from "./Pages/Playbook/Playbook";
 import Logout from "./Pages/Logout/Logout";
-import Login from "./Pages/Login/Login"; // Ensure correct import of Login component
-import ProtectedRoute from './Components/ProtectedRoute'; // Ensure correct import of ProtectedRoute component
+import Login from "./Pages/Login/Login";
+import SignUp from "./Pages/Signup/Signup";
+import ProtectedRoute from './Components/ProtectedRoute';
 
 // Configure Amplify
 Amplify.configure(awsConfig);
@@ -30,6 +31,7 @@ function App() {
         } />
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );

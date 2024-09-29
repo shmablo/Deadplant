@@ -46,18 +46,23 @@
   font-family: "DeadlockFont", sans-serif;
   padding: 5px;
   position: relative;
-  text-decoration: none; /* Ensure no underline */
+  text-decoration: none;
+  /* Ensure no underline */
 }
 
-.nav-item a {
-  text-decoration: none; /* Ensure no underline for anchor tags */
+.nav-link {
+  color: #f8f0e3;
+  /* Ensure the color is the same as other nav items */
+  text-decoration: none;
+  /* No underline */
 }
 
 .nav-link:hover,
 .nav-link:active,
 .nav-link:focus,
 .nav-link:visited {
-  color: #f8f0e3; /* Ensure the color stays the same on hover, active, focus, and visited */
+  color: #f8f0e3;
+  /* Ensure consistent color for the button */
 }
 
 .dropdown-menu {
