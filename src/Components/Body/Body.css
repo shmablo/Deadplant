@@ -47,7 +47,7 @@ body {
 
 /* The title inside the box*/
 .text-container h1 {
-  color: #F8F0E3;
+  color: #f8f0e3;
   display: flex;
   justify-content: center;
   font-family: "DeadlockFont", sans-serif;
@@ -71,7 +71,7 @@ body {
 .text-container p {
   color: #fff;
   font-size: 1.2rem;
-  cursor: default
+  cursor: default;
 }
 
 /* Highlight class for specific words */
@@ -125,8 +125,6 @@ body {
   margin: auto;
   /* Adjust this value as needed */
 
-
-
 /* .paradox-container {
   margin-left: 275px;
   margin-bottom: 100px;
@@ -140,7 +138,6 @@ body {
   color: #c22e2e;
 } */
 
-
 /* .agent-group {
   display: flex;
   flex-direction: column;
@@ -153,9 +150,7 @@ body {
   animation: fadeInOut 5s infinite;
   /* Apply the fade-in and fade-out animation */
 
-
 @keyframes fadeInOut {
-
   0%,
   100% {
     opacity: 0;

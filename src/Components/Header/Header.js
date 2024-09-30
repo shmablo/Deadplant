@@ -57,7 +57,18 @@ const Header = () => {
 
           {isAuthenticated ? (
             <li className="nav-item">
-              <button onClick={handleLogout} className="nav-link" style={{ border: 'none', fontSize: '28px', fontFamily: 'DeadlockFont, sans-serif', background: 'none', padding: '5px', cursor: 'pointer' }}>
+              <button
+                onClick={handleLogout}
+                className="nav-link"
+                style={{
+                  border: "none",
+                  fontSize: "28px",
+                  fontFamily: "DeadlockFont, sans-serif",
+                  background: "none",
+                  padding: "5px",
+                  cursor: "pointer",
+                }}
+              >
                 Logout
               </button>
             </li>

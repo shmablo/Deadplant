@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "DeadlockFont";
+  src: url("../../assets/fonts/deadlockfont.ttf") format("truetype");
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer img {
+  max-width: 200px; /* Adjust size of the image */
+  height: auto; /* Space between image and text */
+}
+
+.footer-text {
+  font-size: 30px;
+  color: white; /* White text for contrast against the background */
+  font-family: "DeadlockFont", sans-serif;
+}
+.footer .bottom-right {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+}
+.footer .bottom-left {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+}
+.footer .bottom-center {
+  position: absolute;
+  bottom: 40px; /* Adjust the distance from the bottom */
+  right: 50%;
+  transform: translateX(50%);
+}
